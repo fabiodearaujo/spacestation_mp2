@@ -29,10 +29,21 @@ body {
 
 .header-container {
     position: relative;
-    height: 40px;
+    height: 100px;
     width: 100%;
     margin: auto;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    font-size: small;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
+
+/* -------------------------------------------TOGGLE STYLES */
+
+  
+
 
 
 
@@ -42,8 +53,7 @@ body {
     position: relative;
     text-align: center;
     margin: auto;
-    border-radius: 5%;
-    border-top:;
+    border-radius: 15px;
     height: 90vmax;
     width: 90%;
 }
