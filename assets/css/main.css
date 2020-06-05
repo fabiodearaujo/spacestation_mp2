@@ -2,6 +2,7 @@
 body {
     width: 100%;
     height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }    
 
 
@@ -24,6 +25,20 @@ body {
     background-color: #595959;
 }
 
+.light-mode {
+    background-color: rgb(190, 190, 190);
+    color: black;
+}
+
+.headerfoot-light {
+    background-color: rgb(190, 190, 190);
+}
+
+.container-light {
+    background-color: azure;
+}
+
+
 
 /* ----------------------------------------- SECTION HEADER CONTAINER */
 
@@ -40,12 +55,14 @@ body {
     flex-direction: column;
 }
 
-/* -------------------------------------------TOGGLE STYLES */
+.logo {
+    font-family: fantasy;
+    letter-spacing: 3px;
+}
 
-  
-
-
-
+.toggle-mode {
+    font-size: medium;
+}
 
 /* ----------------------------------------- SECTION MAP CONTAINER */
 
