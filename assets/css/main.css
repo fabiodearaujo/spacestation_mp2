@@ -1,3 +1,13 @@
+/* ----------------------------------------- GENERAL STYLES */
+body {
+    width: 100%;
+    height: 100vh;
+}    
+
+
+
+
+
 
 /* ----------------------------------------- THEMES COLOR */
 
@@ -6,9 +16,46 @@
     color: #fff;
 }
 
-.map-container-dark {
+.headerfoot-dark {
+    background-color: black;
+}
+
+.container-dark {
     background-color: #595959;
 }
 
 
+/* ----------------------------------------- SECTION HEADER CONTAINER */
 
+.header-container {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+/* ----------------------------------------- SECTION MAP CONTAINER */
+
+.map-container {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    border-radius: 5%;
+    border-top:;
+    height: 90vmax;
+    width: 90%;
+}
+
+
+
+
+/* ----------------------------------------- SECTION FOOTER CONTAINER */
+
+.footer-container {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin: auto;
+}
