@@ -27,16 +27,16 @@ body {
 
 .main-light {
     background-color: rgb(190, 190, 190);
-    color: navy;
+    
 }
 
 .headerfoot-light {
     background-color: rgb(190, 190, 190);
-    color:navy;
+    color: black;
 }
 
 .container-light {
-    background-color: rgb(140, 212, 245);
+    background-color: rgb(255, 255, 255);
 }
 
 
