@@ -12,7 +12,7 @@ body {
 
 /* ----------------------------------------- THEMES COLOR */
 
-.dark-mode {
+.main-dark {
     background-color: black;
     color: #fff;
 }
@@ -25,17 +25,18 @@ body {
     background-color: #595959;
 }
 
-.light-mode {
+.main-light {
     background-color: rgb(190, 190, 190);
-    color: black;
+    color: navy;
 }
 
 .headerfoot-light {
     background-color: rgb(190, 190, 190);
+    color:navy;
 }
 
 .container-light {
-    background-color: azure;
+    background-color: rgb(140, 212, 245);
 }
 
 
