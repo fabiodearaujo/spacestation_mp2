@@ -21,3 +21,22 @@ $(function() {
 
     })
   });
+
+
+//   FETCHING THE DATA FROM JSON API - EXAMPLE CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
+
+  let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
+
+
+
+fetch(urlISS).then(function(response) {
+    return response.json();
+
+}).then(function(issData) {
+    console.log(issData);
+}).catch(function(error) {
+    console.error("Something went wrong with retrieving data");
+    console.error(error);
+})
+
+
