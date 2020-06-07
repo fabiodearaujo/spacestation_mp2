@@ -26,14 +26,12 @@ $(function() {
 //   LEAFLET JS MAP SPACE CREATION
 let myMap = L.map("worldMap", { minZoom: 1, maxZoom: 9}).setView([0,0],1);
 
-   //   ADDING TILES TO THE MAP FROM MAPBOX.COM
- L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmFiaW9kZWFyYXVqbyIsImEiOiJja2I1aTkzcjcwcG50MnlwYml4Z2kyM3dpIn0.psit76bCm1AtS-ffHfX1Uw', {
-    maxZoom: 18,
-    attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1
-}).addTo(myMap);
+//   ADDING TILES TO THE MAP FROM OPENSTREETMAPS.ORG
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+let tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+let tiles = L.tileLayer(tileUrl, { attribution });
+tiles.addTo(myMap);
+
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
@@ -48,6 +46,9 @@ let myMarker = L.marker([0,0], {icon: issIcon}).addTo(myMap);
 // URL FOR API ISS LOCATION
 let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
 
+//VARIABLE TO SET ZOOM ON THE SPACE STATION
+let firstRun = true;
+
 //   FETCHING THE DATA FROM JSON API - EXAMPLE CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
 function getIss() {
     fetch(urlISS).then(function(response) {
@@ -58,15 +59,18 @@ function getIss() {
         let latData = issData.latitude;
         let longData = issData.longitude;
 
-        // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
-        $("#latValue").html(latData.toFixed(3));
-        $("#longValue").html(longData.toFixed(3));
-
         // INCLUDE THE MARKER ON THE MAP
         myMarker.setLatLng([latData, longData]);
 
         // ZOOM IN TO THE LOCATION OF THE SPACE STATION 
-        myMap.setView([latData, longData], 3);
+        if (firstRun) {
+            myMap.setView([latData, longData], 3);
+            firstRun = false;
+        }
+        
+        // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
+        $("#latValue").html(latData.toFixed(3));
+        $("#longValue").html(longData.toFixed(3));
        
     }).catch(function(error) {
         
@@ -75,6 +79,8 @@ function getIss() {
 
     })
 };
+
+getIss();
 
 setInterval( function() {
     getIss()}, 2000);
