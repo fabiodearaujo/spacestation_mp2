@@ -65,9 +65,9 @@ body {
     font-size: medium;
 }
 
-/* ----------------------------------------- SECTION MAP CONTAINER */
+/* ----------------------------------------- SECTION MAIN CONTAINER */
 
-.map-container {
+.main-container {
     position: relative;
     text-align: center;
     margin: auto;
@@ -76,6 +76,10 @@ body {
     width: 90%;
 }
 
+.iss-location {
+    padding: 10px;
+    text-align: left;
+}
 
 
 
