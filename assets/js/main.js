@@ -37,7 +37,7 @@ tiles.addTo(myMap);
 const issIcon = L.icon( {
     iconUrl: '/assets/img/iss200px.png',
     iconSize: [40,30],
-    iconAnchor: [25,16],
+    iconAnchor: [25,16]
 })
 
 let myMarker = L.marker([0,0], {icon: issIcon}).addTo(myMap);
