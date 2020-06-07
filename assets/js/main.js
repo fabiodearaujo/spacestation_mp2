@@ -22,13 +22,15 @@ $(function() {
     })
   });
 
-
-//   FETCHING THE DATA FROM JSON API - EXAMPLE CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
-
+// URL FOR API ISS LOCATION
   let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
 
 
+//   LEAFLET JS MAP SPACE CREATION
+  const mymap = L.map("worldMap").setView([0, 0], 1);
 
+
+//   FETCHING THE DATA FROM JSON API - EXAMPLE CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
 function getIss() {
     fetch(urlISS).then(function(response) {
         
@@ -38,7 +40,7 @@ function getIss() {
         
         $("#latValue").html(issData.latitude);
         $("#longValue").html(issData.longitude);
-
+       
     }).catch(function(error) {
         
         console.log("Something went wrong with retrieving data, please try again later");
@@ -47,7 +49,9 @@ function getIss() {
     })
 };
 
-setInterval(function(){
-    getIss();
-}, 2000);
 
+// setInterval(function(){
+//     getIss();
+// }, 2000);
+
+getIss();
