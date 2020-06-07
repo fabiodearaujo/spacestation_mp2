@@ -29,14 +29,16 @@ $(function() {
 
 
 
-fetch(urlISS).then(function(response) {
-    return response.json();
+function getIss() {
+    fetch(urlISS).then(function(response) {
+        return response.json();
 
-}).then(function(issData) {
-    console.log(issData);
-}).catch(function(error) {
-    console.error("Something went wrong with retrieving data");
-    console.error(error);
-})
+    }).then(function(issData) {
+        console.log(issData);
+    }).catch(function(error) {
+        console.error("Something went wrong with retrieving data, please try again later");
+        console.error(error);
+    })
+};
 
-
+getIss();
