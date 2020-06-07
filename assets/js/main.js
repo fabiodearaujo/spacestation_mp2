@@ -31,14 +31,23 @@ $(function() {
 
 function getIss() {
     fetch(urlISS).then(function(response) {
+        
         return response.json();
 
     }).then(function(issData) {
-        console.log(issData);
+        
+        $("#latValue").html(issData.latitude);
+        $("#longValue").html(issData.longitude);
+
     }).catch(function(error) {
-        console.error("Something went wrong with retrieving data, please try again later");
-        console.error(error);
+        
+        console.log("Something went wrong with retrieving data, please try again later");
+        console.log(error);
+
     })
 };
 
-getIss();
+setInterval(function(){
+    getIss();
+}, 2000);
+
