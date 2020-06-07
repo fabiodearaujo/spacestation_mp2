@@ -24,7 +24,7 @@ $(function() {
 
 
 //   LEAFLET JS MAP SPACE CREATION
-  const mymap = L.map("worldMap").setView([0, 0], 1);
+let myMap = L.map("worldMap", { minZoom: 1, maxZoom: 9}).setView([0,0],1);
 
    //   ADDING TILES TO THE MAP FROM MAPBOX.COM
  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZmFiaW9kZWFyYXVqbyIsImEiOiJja2I1aTkzcjcwcG50MnlwYml4Z2kyM3dpIn0.psit76bCm1AtS-ffHfX1Uw', {
@@ -33,7 +33,7 @@ $(function() {
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1
-}).addTo(mymap);
+}).addTo(myMap);
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
@@ -42,7 +42,7 @@ const issIcon = L.icon( {
     iconAnchor: [25,16],
 })
 
-let myMarker = L.marker([0,0], {icon: issIcon}).addTo(mymap);
+let myMarker = L.marker([0,0], {icon: issIcon}).addTo(myMap);
 
 
 // URL FOR API ISS LOCATION
@@ -59,14 +59,15 @@ function getIss() {
         let longData = issData.longitude;
 
         // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
-        $("#latValue").html(latData);
-        $("#longValue").html(longData);
+        $("#latValue").html(latData.toFixed(3));
+        $("#longValue").html(longData.toFixed(3));
 
         // INCLUDE THE MARKER ON THE MAP
-        marker.setLatLng([latData, longData]);
+        myMarker.setLatLng([latData, longData]);
 
-
-        
+        // ZOOM IN TO THE LOCATION OF THE SPACE STATION 
+        myMap.setView([latData, longData], 3);
+       
     }).catch(function(error) {
         
         console.log("Something went wrong with retrieving data, please try again later");
@@ -75,9 +76,6 @@ function getIss() {
     })
 };
 
+setInterval( function() {
+    getIss()}, 2000);
 
-// setInterval(function(){
-//     getIss();
-// }, 2000);
-
-getIss();
