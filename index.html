@@ -14,21 +14,25 @@
    crossorigin=""/>
    <!-- MapBox Stylesheet CND -->
    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+   <!-- Font Awesome stylesheet  -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+   <!-- Hover stylesheet  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <!-- My own styles -->
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
     <section id="header" class="header headerfoot-dark">
         <div class="header-container">
-            <div class="logo">
-                <h1 id="logo" class="headerfoot-dark">Space Station</h1>
+            <div>
+                <h1 id="logo" class="headerfoot-dark">International Space Station</h1>
             </div>
             <div class="toggle-mode">
-                <p id="toggle-p" class="headerfoot-dark">Dark Mode: 
-                <span>
-                    <input id="mode-toggle"type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="primary" data-offstyle="info">
-                </span>
-            </p>
+               <p id="toggle-p" class="headerfoot-dark">Dark Mode: 
+                    <span>
+                        <input id="mode-toggle"type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="primary" data-offstyle="info">
+                    </span>
+                </p>
             </div>
         </div>
     </section>
@@ -43,17 +47,19 @@
             <div id="worldMap">
 
             </div>
-            <div id="issLive-div">
-                <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            
+
 
         </div>
     </section>
     <section id="footer" class="footer headerfoot-dark">
-        <div class="footer-container">
-            
+        <div class="spacer"></div>
+        <div id="footer-container" class="footer-dark">
+            <div class="menu-dark">Home</div>
+            <div class="menu-dark">Live Video</div>
+            <div class="menu-dark">Pic of the day</div>
+            <div class="menu-dark">About</div>
         </div>
-
     </section>
     <!-- Latest Bootstrap / Jquery / Popper compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
