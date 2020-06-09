@@ -8,15 +8,19 @@ $(function() {
             $("#logo").removeClass("headerfoot-light").addClass("headerfoot-dark");
             $("#toggle-p").removeClass("headerfoot-light").addClass("headerfoot-dark");
             $("#footer").removeClass("headerfoot-light").addClass("headerfoot-dark");
-            $("#main").removeClass("main-light").addClass("main-dark");
-            $("#main-container").removeClass("container-light").addClass("container-dark");
+            $("#main").removeClass("headerfoot-light").addClass("headerfoot-dark");
+            $("#issLocation-container").removeClass("container-light").addClass("container-dark");
+            $("#issLive-container").removeClass("container-light").addClass("container-dark");
+            $("#picDay-container").removeClass("container-light").addClass("container-dark");
         } else {
             $("#header").removeClass("headerfoot-dark").addClass("headerfoot-light");
             $("#logo").removeClass("headerfoot-dark").addClass("headerfoot-light");
             $("#toggle-p").removeClass("headerfoot-dark").addClass("headerfoot-light");
             $("#footer").removeClass("headerfoot-dark").addClass("headerfoot-light");
-            $("#main").removeClass("main-dark").addClass("main-light");
-            $("#main-container").removeClass("container-dark").addClass("container-light");
+            $("#main").removeClass("headerfoot-dark").addClass("headerfoot-light");
+            $("#issLocation-container").removeClass("container-dark").addClass("container-light");
+            $("#issLive-container").removeClass("container-dark").addClass("container-light");
+            $("#picDay-container").removeClass("container-dark").addClass("container-light");
         }
 
     })
@@ -80,14 +84,6 @@ function getIss() {
     })
 };
 
-getIss();
-
 setInterval( function() {
     getIss()}, 2000);
 
-
-
-
-    // <div id="issLive-div">
-    //             <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    // </div>

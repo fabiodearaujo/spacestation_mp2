@@ -12,12 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
    crossorigin=""/>
-   <!-- MapBox Stylesheet CND -->
-   <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
    <!-- Font Awesome stylesheet  -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-   <!-- Hover stylesheet  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <!-- My own styles -->
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
@@ -36,30 +32,39 @@
             </div>
         </div>
     </section>
-    <section id="main" class="main main-dark">       
-        <div id="main-container" class="main-container container-dark">
-            <div class="iss-location">
+    <section id="main" class="main headerfoot-dark">       
+        <div id="issLocation-container" class="card container-dark">
+            <div class="card-title">
                 <h3>ISS Location:</h3>
-                <p>Latitude:  <span id="latValue"></span><br>
-                Longitude: <span id="longValue"></span></p>
+                 <p>Latitude:  <span id="latValue"></span><br>
+                 Longitude: <span id="longValue"></span></p>
             </div>
             <!-- LEAFLET MAP LOADING -->
             <div id="worldMap">
-
+    
+            </div>   
+        </div>
+        <div id="issLive-container" class="card container-dark">
+            <div class="card-title">
+                <h3>ISS Live Video:</h3>
             </div>
-            
-
-
+            <div id="issLive-div">
+                <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div id="picDay-container" class="card container-dark">
+            <div class="card-title">
+                <h3>Picture of the Day:</h3>
+            </div>
+            <div id="picDay">
+                
+            </div>
         </div>
     </section>
     <section id="footer" class="footer headerfoot-dark">
-        <div class="spacer"></div>
-        <div id="footer-container" class="footer-dark">
-            <div class="menu-dark">Home</div>
-            <div class="menu-dark">Live Video</div>
-            <div class="menu-dark">Pic of the day</div>
-            <div class="menu-dark">About</div>
-        </div>
+        <div class="spacer headerfoot-dark"></div>
+
+        
     </section>
     <!-- Latest Bootstrap / Jquery / Popper compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -71,8 +76,6 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
-   <!-- MapBox CDN Javascript -->
-   <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
     <!-- My own script -->
     <script src="/assets/js/main.js"></script>
 </body>
