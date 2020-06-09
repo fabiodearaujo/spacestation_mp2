@@ -39,12 +39,13 @@ tiles.addTo(myMap);
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
-    iconUrl: 'https://fabioaraujo76.github.io/spacestation_mp2/assets/img/iss200px.png',
+    iconUrl: '/assets/img/iss200px.png',
     iconSize: [40,30],
     iconAnchor: [25,16]
 })
 
 let myMarker = L.marker([0,0], {icon: issIcon}).addTo(myMap);
+
 
 
 // URL FOR API ISS LOCATION
@@ -72,9 +73,17 @@ function getIss() {
             firstRun = false;
         }
         
+
+        L.circle([latData, longData], 1000, {
+            stroke: true,
+            weight: 3,
+            color: "#f00e02"
+        }).addTo(myMap);
+
         // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
         $("#latValue").html(latData.toFixed(3));
         $("#longValue").html(longData.toFixed(3));
+
        
     }).catch(function(error) {
         
