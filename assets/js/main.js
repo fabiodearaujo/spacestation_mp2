@@ -39,7 +39,7 @@ tiles.addTo(myMap);
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
-    iconUrl: 'https://fabioaraujo76.github.io/spacestation_mp2/assets/img/iss200px.png',
+    iconUrl: 'https://github.com/fabioaraujo76/spacestation_mp2/blob/master/assets/img/iss200px.png',
     iconSize: [40,30],
     iconAnchor: [25,16]
 })
