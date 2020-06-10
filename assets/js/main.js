@@ -96,3 +96,25 @@ function getIss() {
 setInterval( function() {
     getIss()}, 2000);
 
+
+
+// NASA API URL SETUP 
+let nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+
+function getApod() {
+    fetch(nasaUrl).then(function(resp) {
+        
+        return resp.json();
+
+    }).then(function(apodImg) {
+        let apodpic = apodImg.url;
+        let apodcop = apodImg.copyright;
+        let apodexp = apodImg.explanation;
+        let apodtitle = apodImg.title;
+
+        console.log(apodpic);
+        console.log(apodcop);
+        console.log(apodexp);
+        console.log(apodtitle);
+    })
+};

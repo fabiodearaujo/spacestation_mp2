@@ -101,6 +101,11 @@ body {
     height: 400px;
 }
 
+#picDay {
+    width: 100%;
+    height: 400px;
+}
+
 #menu-container {
     position: relative;
     height: 40px;
