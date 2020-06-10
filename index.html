@@ -36,13 +36,14 @@
         <div id="issLocation-container" class="card container-dark">
             <div class="card-title">
                 <h3>ISS Location:</h3>
-                 <p>Latitude:  <span id="latValue"></span><br>
-                 Longitude: <span id="longValue"></span></p>
             </div>
             <!-- LEAFLET MAP LOADING -->
-            <div id="worldMap">
-    
-            </div>   
+            <div id="worldMap"></div>
+            <div class="card-title">
+                <p><strong>Latitude: </strong><span id="latValue"></span></p>
+                <p><strong>Longitude: </strong><span id="longValue"></span></p>
+            </div>
+            
         </div>
         <div id="issLive-container" class="card container-dark">
             <div class="card-title">
@@ -56,8 +57,11 @@
             <div class="card-title">
                 <h3>Picture of the Day:</h3>
             </div>
-            <div id="picDay">
-                
+            <div id="picDay"></div>
+            <div class="cardFlex card-title">
+                <div id="title"></div>
+                <div id="credit"></div>
+                <div id="info"></div>
             </div>
         </div>
     </section>

@@ -106,6 +106,18 @@ body {
     height: 400px;
 }
 
+#apocpic {
+    height: 400px;
+    width: 400px;
+}
+
+.cardFlex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #menu-container {
     position: relative;
     height: 40px;

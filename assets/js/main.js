@@ -112,9 +112,15 @@ function getApod() {
         let apodexp = apodImg.explanation;
         let apodtitle = apodImg.title;
 
+        $("#picDay").html("<a href='"+apodpic+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Awesome Picture of the Day'/></a>");
+        $("#title").html("<p><strong>Title: </strong>"+apodtitle+"</p>");
+        $("#credit").html("<p><strong>Credits: </strong>"+apodcop+"</p>");
+
         console.log(apodpic);
         console.log(apodcop);
         console.log(apodexp);
         console.log(apodtitle);
     })
 };
+
+getApod();
