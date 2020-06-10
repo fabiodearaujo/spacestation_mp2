@@ -63,6 +63,8 @@ function getIss() {
     }).then(function(issData) {
         let latData = issData.latitude;
         let longData = issData.longitude;
+        let altiData = issData.altitude;
+        let speeData = issData.velocity;
 
         // INCLUDE THE MARKER ON THE MAP
         myMarker.setLatLng([latData, longData]);
@@ -83,6 +85,8 @@ function getIss() {
         // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
         $("#latValue").html(latData.toFixed(3));
         $("#longValue").html(longData.toFixed(3));
+        $("#altiValue").html(altiData.toFixed(3));
+        $("#speedValue").html(speeData.toFixed(3));
 
        
     }).catch(function(error) {
@@ -108,11 +112,12 @@ function getApod() {
 
     }).then(function(apodImg) {
         let apodpic = apodImg.url;
+        let apodpichd = apodImg.hdurl;
         let apodcop = apodImg.copyright;
         let apodexp = apodImg.explanation;
         let apodtitle = apodImg.title;
 
-        $("#picDay").html("<a href='"+apodpic+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Awesome Picture of the Day'/></a>");
+        $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Awesome Picture of the Day'/></a>");
         $("#title").html("<p><strong>Title: </strong>"+apodtitle+"</p>");
         $("#credit").html("<p><strong>Credits: </strong>"+apodcop+"</p>");
 
