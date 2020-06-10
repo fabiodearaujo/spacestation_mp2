@@ -15,16 +15,16 @@
    <!-- Font Awesome stylesheet  -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
     <!-- My own styles -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body>
-    <section id="header" class="header headerfoot-dark">
+<body id="bodymain" class="background-dark">
+    <section id="header" class="header background-dark">
         <div class="header-container">
             <div>
-                <h1 id="logo" class="headerfoot-dark">International Space Station</h1>
+                <h1 id="logo" class="background-dark">International Space Station</h1>
             </div>
             <div class="toggle-mode">
-               <p id="toggle-p" class="headerfoot-dark">Dark Mode: 
+               <p id="toggle-p" class="background-dark">Dark Mode: 
                     <span>
                         <input id="mode-toggle"type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="primary" data-offstyle="info">
                     </span>
@@ -32,7 +32,7 @@
             </div>
         </div>
     </section>
-    <section id="main" class="main headerfoot-dark">       
+    <section id="main" class="main background-dark">       
         <div id="issLocation-container" class="card container-dark">
             <div class="card-title">
                 <h3>ISS Location:</h3>
@@ -50,7 +50,7 @@
                 <h3>ISS Live Video:</h3>
             </div>
             <div id="issLive-div">
-                <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="card-title">
                 <p><strong>Altitude: </strong><span id="altiValue"></span> Km</p>
@@ -69,10 +69,8 @@
             </div>
         </div>
     </section>
-    <section id="footer" class="footer headerfoot-dark">
-        <div class="spacer headerfoot-dark"></div>
-
-        
+    <section id="footer" class="footer background-dark">
+            
     </section>
     <!-- Latest Bootstrap / Jquery / Popper compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -85,6 +83,6 @@
    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
    crossorigin=""></script>
     <!-- My own script -->
-    <script src="/assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

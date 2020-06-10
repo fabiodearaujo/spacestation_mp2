@@ -12,7 +12,8 @@ body {
 
 /* ----------------------------------------- THEMES COLOR */
 
-.headerfoot-dark {
+
+.background-dark {
     background-color: black;
     color: #fff;
 }
@@ -23,15 +24,15 @@ body {
     color: #fff;
 }
 
-.headerfoot-light {
-    background-color: rgb(190, 190, 190);
-    color: black;
+.background-light {
+    background-color: rgb(255,255,255);
+    color: rgb(15, 15, 100);
 }
 
 .container-light {
-    background-color: rgb(255, 255, 255);
-    border-color: rgb(255, 255, 255)!important;
-    color: black;
+    background-color: rgb(190, 190, 190);
+    border-color: rgb(190, 190, 190)!important;
+    color: rgb(15, 15, 100);
 }
 
 
@@ -51,16 +52,19 @@ body {
     flex-wrap: wrap;
 }
 
-.logo {
+#logo {
     font-family: "Roboto", sans-serif;
     letter-spacing: 3px;
     padding: 30px;
     border: 20px;
+    font-weight: 900;
 }
 
 .toggle-mode {
     font-size: medium;
-    padding: 30px;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
 }
 
 /* ----------------------------------------- SECTION MAIN CONTAINER */
@@ -141,11 +145,3 @@ body {
 }
 
 
-
-/* ----------------------------------------- SECTION FOOTER CONTAINER */
-
-
-.spacer {
-    height: 20px;
-    margin: 0;
-}

@@ -4,20 +4,22 @@ $(function() {
     $('#mode-toggle').change(function() {
         let dark = $(this).prop('checked');
         if (dark == true) {
-            $("#header").removeClass("headerfoot-light").addClass("headerfoot-dark");
-            $("#logo").removeClass("headerfoot-light").addClass("headerfoot-dark");
-            $("#toggle-p").removeClass("headerfoot-light").addClass("headerfoot-dark");
-            $("#footer").removeClass("headerfoot-light").addClass("headerfoot-dark");
-            $("#main").removeClass("headerfoot-light").addClass("headerfoot-dark");
+            $("#bodymain").removeClass("background-light").addClass("background-dark");
+            $("#header").removeClass("background-light").addClass("background-dark");
+            $("#logo").removeClass("background-light").addClass("background-dark");
+            $("#toggle-p").removeClass("background-light").addClass("background-dark");
+            $("#footer").removeClass("background-light").addClass("background-dark");
+            $("#main").removeClass("background-light").addClass("background-dark");
             $("#issLocation-container").removeClass("container-light").addClass("container-dark");
             $("#issLive-container").removeClass("container-light").addClass("container-dark");
             $("#picDay-container").removeClass("container-light").addClass("container-dark");
         } else {
-            $("#header").removeClass("headerfoot-dark").addClass("headerfoot-light");
-            $("#logo").removeClass("headerfoot-dark").addClass("headerfoot-light");
-            $("#toggle-p").removeClass("headerfoot-dark").addClass("headerfoot-light");
-            $("#footer").removeClass("headerfoot-dark").addClass("headerfoot-light");
-            $("#main").removeClass("headerfoot-dark").addClass("headerfoot-light");
+            $("#bodymain").removeClass("background-dark").addClass("background-light");
+            $("#header").removeClass("background-dark").addClass("background-light");
+            $("#logo").removeClass("background-dark").addClass("background-light");
+            $("#toggle-p").removeClass("background-dark").addClass("background-light");
+            $("#footer").removeClass("background-dark").addClass("background-light");
+            $("#main").removeClass("background-dark").addClass("background-light");
             $("#issLocation-container").removeClass("container-dark").addClass("container-light");
             $("#issLive-container").removeClass("container-dark").addClass("container-light");
             $("#picDay-container").removeClass("container-dark").addClass("container-light");
@@ -39,7 +41,7 @@ tiles.addTo(myMap);
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
-    iconUrl: '/assets/img/iss200px.png',
+    iconUrl: '../assets/img/iss200px.png',
     iconSize: [40,30],
     iconAnchor: [25,16]
 })
@@ -103,7 +105,7 @@ setInterval( function() {
 
 
 // NASA API URL SETUP 
-let nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+let nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=GLaY6JWgmAcIvfY9Xx8FcQqmbA3hdzQLhho0kN3q"
 
 function getApod() {
     fetch(nasaUrl).then(function(resp) {
@@ -114,17 +116,12 @@ function getApod() {
         let apodpic = apodImg.url;
         let apodpichd = apodImg.hdurl;
         let apodcop = apodImg.copyright;
-        let apodexp = apodImg.explanation;
         let apodtitle = apodImg.title;
 
-        $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Awesome Picture of the Day'/></a>");
+        $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
         $("#title").html("<p><strong>Title: </strong>"+apodtitle+"</p>");
         $("#credit").html("<p><strong>Credits: </strong>"+apodcop+"</p>");
 
-        console.log(apodpic);
-        console.log(apodcop);
-        console.log(apodexp);
-        console.log(apodtitle);
     })
 };
 
