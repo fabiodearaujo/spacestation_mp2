@@ -13,6 +13,10 @@ $(function() {
             $("#issLocation-container").removeClass("container-light").addClass("container-dark");
             $("#issLive-container").removeClass("container-light").addClass("container-dark");
             $("#picDay-container").removeClass("container-light").addClass("container-dark");
+            $("#about-container").removeClass("container-light").addClass("container-dark");
+            $("#toNasa").removeClass("button-light").addClass("button-dark"); 
+            $("#toIss").removeClass("button-light").addClass("button-dark");    
+            $("#toSpacex").removeClass("button-light").addClass("button-dark"); 
         } else {
             $("#bodymain").removeClass("background-dark").addClass("background-light");
             $("#header").removeClass("background-dark").addClass("background-light");
@@ -23,6 +27,10 @@ $(function() {
             $("#issLocation-container").removeClass("container-dark").addClass("container-light");
             $("#issLive-container").removeClass("container-dark").addClass("container-light");
             $("#picDay-container").removeClass("container-dark").addClass("container-light");
+            $("#about-container").removeClass("container-dark").addClass("container-light");
+            $("#toNasa").removeClass("button-dark").addClass("button-light");
+            $("#toIss").removeClass("button-dark").addClass("button-light");
+            $("#toSpacex").removeClass("button-dark").addClass("button-light");
         }
 
     })
