@@ -54,6 +54,7 @@ let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
 //VARIABLE TO SET ZOOM ON THE SPACE STATION
 let firstRun = true;
 
+
 //   FETCHING THE DATA FROM JSON API - EXAMPLE MODIFIED TO MY NEEDS FROM CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
 function getIss() {
     fetch(urlISS).then(function(response) {
@@ -62,13 +63,14 @@ function getIss() {
 
     }).then(function(issData) {
         // STORING THE DATA RECEIVED INTO VARIABLES
-        window.latData = issData.latitude;
-        window.longData = issData.longitude;
+        let latData = issData.latitude;
+        let longData = issData.longitude;
         let altiData = issData.altitude;
         let speeData = issData.velocity;
 
         // INCLUDE THE MARKER ON THE MAP
         myMarker.setLatLng([latData, longData]);
+
 
         // ZOOM IN TO THE LOCATION OF THE SPACE STATION 
         if (firstRun) {
@@ -76,13 +78,14 @@ function getIss() {
             firstRun = false;
         }
         
-
+        // DRAWN A STROKE WHERE THE ISS PASSED CREARTING A PATH 
         L.circle([latData, longData], 1000, {
             stroke: true,
             weight: 3,
             color: "#f00e02"
         }).addTo(myMap);
 
+                
         // DISPLAY LATITUDE AND LONGITUDE ON THE CARD 
         $("#latValue").html(latData.toFixed(3));
         $("#longValue").html(longData.toFixed(3));
@@ -97,6 +100,8 @@ function getIss() {
 
     })
 };
+
+getIss();
 
 setInterval( function() {
     getIss()}, 2000);
@@ -129,20 +134,5 @@ function getApod() {
 
 getApod();
 
-// OpenWeather API SETUP
 
-let weatherkey = "833f5ca334196f45edea9c3f3dab5359"
 
-let weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?lat={"+window.latData+"}&lon={"+window.longData+"}&appid={"+weatherkey+"}";
-
-console.log(weatherApiUrl);
-
-function getWeather() {
-    // FECHING DATA OPENWEATHER API TO GET BACK THE WEATHER INFORMATION 
-    fetch(weatherApiUrl).then(function(responseWeather) {
-        
-        return responseWeather.json();
-        console.log(responseWeather);
-
-    })
-};
