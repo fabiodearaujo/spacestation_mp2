@@ -48,23 +48,22 @@ const issIcon = L.icon( {
 
 let myMarker = L.marker([0,0], {icon: issIcon}).addTo(myMap);
 
-
-
 // URL FOR API ISS LOCATION
 let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
 
 //VARIABLE TO SET ZOOM ON THE SPACE STATION
 let firstRun = true;
 
-//   FETCHING THE DATA FROM JSON API - EXAMPLE CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
+//   FETCHING THE DATA FROM JSON API - EXAMPLE MODIFIED TO MY NEEDS FROM CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
 function getIss() {
     fetch(urlISS).then(function(response) {
         
         return response.json();
 
     }).then(function(issData) {
-        let latData = issData.latitude;
-        let longData = issData.longitude;
+        // STORING THE DATA RECEIVED INTO VARIABLES
+        window.latData = issData.latitude;
+        window.longData = issData.longitude;
         let altiData = issData.altitude;
         let speeData = issData.velocity;
 
@@ -84,7 +83,7 @@ function getIss() {
             color: "#f00e02"
         }).addTo(myMap);
 
-        // DISPLAY LATITUDE AND LONGITUDE ON THE PAGE 
+        // DISPLAY LATITUDE AND LONGITUDE ON THE CARD 
         $("#latValue").html(latData.toFixed(3));
         $("#longValue").html(longData.toFixed(3));
         $("#altiValue").html(altiData.toFixed(3));
@@ -108,21 +107,42 @@ setInterval( function() {
 let nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=GLaY6JWgmAcIvfY9Xx8FcQqmbA3hdzQLhho0kN3q"
 
 function getApod() {
+    // FECHING DATA FROM NASA API TO GET BACK THE PICTURE OF THE DAY AND INFORMATION 
     fetch(nasaUrl).then(function(resp) {
         
         return resp.json();
 
     }).then(function(apodImg) {
+        // STORING THE DATA RECEIVED INTO VARIABLES
         let apodpic = apodImg.url;
         let apodpichd = apodImg.hdurl;
         let apodcop = apodImg.copyright;
         let apodtitle = apodImg.title;
 
+        //DISPLAYING INFORMATION INTO THE CARD
         $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
-        $("#title").html("<p><strong>Title: </strong>"+apodtitle+"</p>");
-        $("#credit").html("<p><strong>Credits: </strong>"+apodcop+"</p>");
+        $("#title").html("<strong>Title: </strong>"+apodtitle);
+        $("#credit").html("<strong>Credits: </strong>"+apodcop);
 
     })
 };
 
 getApod();
+
+// OpenWeather API SETUP
+
+let weatherkey = "833f5ca334196f45edea9c3f3dab5359"
+
+let weatherApiUrl = "https://api.openweathermap.org/data/2.5/weather?lat={"+window.latData+"}&lon={"+window.longData+"}&appid={"+weatherkey+"}";
+
+console.log(weatherApiUrl);
+
+function getWeather() {
+    // FECHING DATA OPENWEATHER API TO GET BACK THE WEATHER INFORMATION 
+    fetch(weatherApiUrl).then(function(responseWeather) {
+        
+        return responseWeather.json();
+        console.log(responseWeather);
+
+    })
+};
