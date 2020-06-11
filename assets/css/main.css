@@ -25,14 +25,14 @@ body {
 }
 
 .background-light {
-    background-color: rgb(108, 127, 145);
-    color: rgb(15, 15, 100);
+    background-color: rgb(150, 167, 177);
+    color: rgb(0, 0, 0);
 }
 
 .container-light {
     background-color: rgb(190, 190, 190);
     border-color: rgb(190, 190, 190)!important;
-    color: rgb(15, 15, 100);
+    color: rgb(0, 0, 0);
 }
 
 
@@ -198,3 +198,96 @@ body {
     font-weight: bold;
     padding: 3px 10px;
 }
+
+
+
+/* ----------------------------- MEDIA QUERIES FOR RESPONSIVE PAGE ON DESKTOP */
+
+@media screen and (min-width: 1660px) {
+    .card {
+        margin: auto;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        min-width: 700px;
+        height: 600px;
+    }
+
+    #apocpic {
+        height: 400px;
+        width: 700px;
+    }
+
+    
+    #about {
+        width: 700px;
+        text-align: justify;
+        padding: 50px; 
+    }
+
+  }
+
+  @media screen and (min-width: 1420px) {
+    .card {
+        margin: auto;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        min-width: 600px;
+        height: 600px;
+    }
+
+    #apocpic {
+        height: 400px;
+        width: 600px;
+    }
+
+    #about {
+        width: 600px;
+        text-align: justify;
+        padding: 50px; 
+    }
+    
+  }
+
+  @media screen and (min-width: 1220px) {
+    .card {
+        margin: auto;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        min-width: 450px;
+        height: 600px;
+    }
+
+    #apocpic {
+        width: 450px;
+        height: 400px;
+    }
+
+    #about {
+        width: 450px;
+        text-align: justify;
+        padding: 50px; 
+    }
+    
+  }
+
+  @media screen and (max-width: 320px) {
+    .card {
+        margin: auto;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        min-width: 300px;
+        height: 600px;
+    }
+
+    #apocpic {
+        width: 300px;
+        height: 400px;
+    }
+
+    #about {
+        width: 300px;
+        text-align: justify;
+        padding: 10px; 
+    }
+    
+  }
