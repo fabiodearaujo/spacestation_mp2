@@ -63,6 +63,7 @@ body {
 .toggle-mode {
     font-size: medium;
     padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -75,16 +76,18 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
 
 
 .card {
-    position: relative;
+    /* position: relative; */
     text-align: center;
-    margin: auto;
     margin-bottom: 50px;
     border-radius: 15px;
-    min-width: 400px;
+    min-width: 300px;
+    max-width: 500px;
+    width: 97%;
     height: 600px;
     font-family: "Roboto", sans-serif;
     border-width: 5px;
@@ -112,8 +115,9 @@ body {
 }
 
 #apocpic {
+    margin: 0;
+    width:100%;
     height: 400px;
-    width: 400px;
 }
 
 .cardFlex {
@@ -146,7 +150,7 @@ body {
 }
 
 #about {
-    width: 400px;
+    width: 100%;
     text-align: justify;
     padding: 10px; 
     display: flex;
@@ -203,91 +207,19 @@ body {
 
 /* ----------------------------- MEDIA QUERIES FOR RESPONSIVE PAGE ON DESKTOP */
 
-@media screen and (min-width: 1660px) {
-    .card {
-        margin: auto;
-        margin-bottom: 50px;
-        border-radius: 15px;
-        min-width: 700px;
-        height: 600px;
-    }
-
-    #apocpic {
-        height: 400px;
-        width: 700px;
-    }
-
-    
-    #about {
-        width: 700px;
-        text-align: justify;
-        padding: 50px; 
-    }
-
-  }
-
   @media screen and (min-width: 1420px) {
     .card {
-        margin: auto;
-        margin-bottom: 50px;
-        border-radius: 15px;
         min-width: 600px;
-        height: 600px;
     }
 
-    #apocpic {
-        height: 400px;
-        width: 600px;
+    @media screen and (min-width: 1790px) {
+        .card {
+            min-width: 800px;
+        }
     }
 
-    #about {
-        width: 600px;
-        text-align: justify;
-        padding: 50px; 
+    @media screen and (min-width: 2390px) {
+        .card {
+            min-width: 1000px;
+        }
     }
-    
-  }
-
-  @media screen and (min-width: 1220px) {
-    .card {
-        margin: auto;
-        margin-bottom: 50px;
-        border-radius: 15px;
-        min-width: 450px;
-        height: 600px;
-    }
-
-    #apocpic {
-        width: 450px;
-        height: 400px;
-    }
-
-    #about {
-        width: 450px;
-        text-align: justify;
-        padding: 50px; 
-    }
-    
-  }
-
-  @media screen and (max-width: 320px) {
-    .card {
-        margin: auto;
-        margin-bottom: 50px;
-        border-radius: 15px;
-        min-width: 300px;
-        height: 600px;
-    }
-
-    #apocpic {
-        width: 300px;
-        height: 400px;
-    }
-
-    #about {
-        width: 300px;
-        text-align: justify;
-        padding: 10px; 
-    }
-    
-  }
