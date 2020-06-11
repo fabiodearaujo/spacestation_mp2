@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:100,200,300,400,500,600,700|Orbitro:800,900');
 
 
 /* ----------------------------------------- GENERAL STYLES */
@@ -39,33 +39,27 @@ body {
 /* ----------------------------------------- SECTION HEADER CONTAINER */
 
 .header-container {
-    position: relative;
     height: 100%;
     width: 100%;
-    margin: auto;
-    color: #fff;
-    text-align: center;
-    display: flex;
     font-size: small;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;   
 }
 
 #logo {
-    font-family: "Roboto", sans-serif;
+    font-family: "Orbitro", sans-serif;
     letter-spacing: 3px;
     padding: 30px;
     border: 20px;
-    font-weight: 900;
+    font-weight: 800;
 }
 
 .toggle-mode {
+    position: relative;
     font-size: medium;
     padding-top: 30px;
     padding-bottom: 30px;
-    display: flex;
-    align-items: center;
     font-weight: bold;
 }
 
@@ -127,28 +121,6 @@ body {
     justify-content: space-around;
 }
 
-#menu-container {
-    position: relative;
-    height: 40px;
-    width: 100%;
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-
-}
-
-#menu-container button {
-    border-radius: 8px;
-    height: 50px;
-    width: 20%;
-    font-weight: bold;
-    border-style: solid;
-    border-collapse: collapse;
-    border-width: 2px;
-}
-
 #about {
     width: 100%;
     text-align: justify;
@@ -207,19 +179,31 @@ body {
 
 /* ----------------------------- MEDIA QUERIES FOR RESPONSIVE PAGE ON DESKTOP */
 
-  @media screen and (min-width: 1420px) {
-    .card {
-        min-width: 600px;
+    @media screen and (min-width: 1420px) {
+        .card {
+            min-width: 600px;
+        }
+
+        #logo {
+            font-size: 4em;
     }
 
     @media screen and (min-width: 1790px) {
         .card {
             min-width: 800px;
         }
+
+        #logo {
+            font-size: 5em;
+        }
     }
 
     @media screen and (min-width: 2390px) {
         .card {
             min-width: 1000px;
+        }
+
+        #logo {
+            font-size: 6em;
         }
     }
