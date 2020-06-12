@@ -121,7 +121,7 @@ body {
     justify-content: space-around;
 }
 
-#about {
+.about {
     width: 100%;
     text-align: justify;
     padding: 10px; 
@@ -131,18 +131,18 @@ body {
     flex-direction: row;
 }
 
-#about div {
+.about div {
     position: relative;
     text-align: center;
-    padding: 15px;
-    margin-top: 15px;
+    padding: 5px;
+    margin-top: 5px;
     
 }
 
 .button-dark:link, .button-dark:visited {
     background-color: rgb(66, 176, 245);
     color:black;
-    padding: 1px 8px;
+    padding: 1px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -151,16 +151,16 @@ body {
 }
 
 .button-dark:hover, .button-dark:active {
-    background-color: rgb(66, 176, 245);
+    background-color: rgb(124, 190, 145);
     color:black;
     font-weight: bold;
-    padding: 3px 10px;
+    padding: 1px 5px;
 }
 
 .button-light:link, .button-light:visited {
     background-color: #196ce9;
     color: white;
-    padding: 1px 8px;
+    padding: 1px 5px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -169,15 +169,50 @@ body {
 }
 
 .button-light:hover, .button-light:active {
-    background-color: #196ce9;
+    background-color: #60864f;
     color: white;
     font-weight: bold;
-    padding: 3px 10px;
+    padding: 1px 5px;
+}
+
+
+/* ----------------------------------------- SECTION FOOTER */
+
+.footer p {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
 
 
 /* ----------------------------- MEDIA QUERIES FOR RESPONSIVE PAGE ON DESKTOP */
+
+   @media screen and (min-width: 768px) {
+        .about div {
+            padding: 15px;
+            margin-top: 30px; 
+        }
+        
+        .button-dark:link, .button-dark:visited {
+            padding: 8px 12px;
+        }
+        
+        .button-dark:hover, .button-dark:active {
+            padding: 8px 12px;
+        }
+        
+        .button-light:link, .button-light:visited {
+            padding: 8px 12px;
+        }
+        
+        .button-light:hover, .button-light:active {
+            padding: 8px 12px;
+        }
+
+   }
+
+
+
 
     @media screen and (min-width: 1420px) {
         .card {
@@ -196,6 +231,29 @@ body {
         #logo {
             font-size: 5em;
         }
+
+        .about div {
+            padding: 30px;
+            margin-top: 60px; 
+        }
+        
+        .button-dark:link, .button-dark:visited {
+            padding: 15px 25px;
+        }
+        
+        .button-dark:hover, .button-dark:active {
+            padding: 15px 25px;
+        }
+        
+        .button-light:link, .button-light:visited {
+            padding: 15px 25px;
+        }
+        
+        .button-light:hover, .button-light:active {
+            padding: 15px 25px;
+        }
+
+
     }
 
     @media screen and (min-width: 2390px) {

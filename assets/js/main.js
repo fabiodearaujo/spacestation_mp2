@@ -132,6 +132,7 @@ function getApod() {
         let apodcop = apodImg.copyright;
         let apodtitle = apodImg.title;
 
+
         //DISPLAYING INFORMATION INTO THE CARD
         $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
         $("#title").html("<strong>Title: </strong>"+apodtitle);
