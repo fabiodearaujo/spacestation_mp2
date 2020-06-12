@@ -132,12 +132,20 @@ function getApod() {
         let apodcop = apodImg.copyright;
         let apodtitle = apodImg.title;
 
+        // HANDLER TO DON'T SHOW UNDEFINED IN CASE THE INFORMATION IS MISSING ON THE JSON 
+        if (apodcop == undefined || apodcop === "") {
+            apodcop = "Not credited by NASA";
+        }
 
         //DISPLAYING INFORMATION INTO THE CARD
         $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
         $("#title").html("<strong>Title: </strong>"+apodtitle);
         $("#credit").html("<strong>Credits: </strong>"+apodcop);
 
+    }).catch(function(error) {
+        
+        console.log("Something went wrong with retrieving data, please try again later");
+        console.log(error);
     })
 };
 
