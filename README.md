@@ -37,4 +37,45 @@ This is the International Space Station unofficial fan website to demonstrate th
     -   #### Imagery
         -   Imagery is important. The main card brings the International Space Station location in the map with a marker shaped like itself. A live streem of the Space Station will also autostart showing amazing imagery into the user's screen. Also the Astronomy Picture of the Day will catch the attention of the user with pictures of the space straight from NASA.
 
-        
+       ### Wireframes
+
+    -   Home Page Wireframe - [View](https://drive.google.com/file/d/1ImHxpkpQ5OTSVJzXGB-Z9g_JXOTMM2qf/view?usp=sharing)
+
+## Features
+
+-   Mobile First approach
+
+-   Responsive on all device sizes
+
+-   Dark and Light Mode
+
+-   Interactive elements
+
+## Technologies Used
+
+### Languages Used
+
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+### Frameworks, Libraries & Programs Used
+
+1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+    - Bootstrap was used to assist with the responsiveness and styling of the cards.
+1. [Bootstrap Toggle](https://www.bootstraptoggle.com/)
+    - Bootstrap Toggle was used to create the Dark/Light Mode Toggle.
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Roboto' and 'Orbitron' fonts into the style.css file which is used on throughout the project.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on the card buttons to add icons for aesthetic and UX purposes.
+1. [jQuery:](https://jquery.com/)
+    - jQuery was used to create Dark/Light Mode changing the color of the elements on the screen and also to display/create elements fetched from the API's source.
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Git Bash terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+1. [Visual Studio Code:](https://code.visualstudio.com/)
+    - Visual Studio Code was used to write the code.
+1. [Balsamiq:](https://balsamiq.com/)
+    - Balsamiq was used to create the wireframes during the design process.
