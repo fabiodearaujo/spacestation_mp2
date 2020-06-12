@@ -51,6 +51,8 @@ This is the International Space Station unofficial fan website to demonstrate th
 
 -   Interactive elements
 
+-   Live updated content
+
 ## Technologies Used
 
 ### Languages Used
@@ -59,7 +61,7 @@ This is the International Space Station unofficial fan website to demonstrate th
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 -   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-### Frameworks, Libraries & Programs Used
+### Frameworks, Libraries, APIs & Programs Used
 
 1. [Bootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
     - Bootstrap was used to assist with the responsiveness and styling of the cards.
@@ -73,6 +75,12 @@ This is the International Space Station unofficial fan website to demonstrate th
     - jQuery was used to create Dark/Light Mode changing the color of the elements on the screen and also to display/create elements fetched from the API's source.
 1. [Git](https://git-scm.com/)
     - Git was used for version control by utilizing the Git Bash terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
+1. [Where the ISS at?](https://wheretheiss.at/w/developer)
+    - REST API 
+1. [GitHub:](https://github.com/)
+    - GitHub is used to store the projects code after being pushed from Git.
 1. [GitHub:](https://github.com/)
     - GitHub is used to store the projects code after being pushed from Git.
 1. [Visual Studio Code:](https://code.visualstudio.com/)

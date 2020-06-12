@@ -83,6 +83,11 @@ function getIss() {
         // ZOOM IN TO THE LOCATION OF THE SPACE STATION 
         if (firstRun) {
             myMap.setView([latData, longData], 3);
+            //ADDING DAY AND NIGHT LAYER TO THE MAP AND SETTING IT TO RUN EVERY 1 MINUTE
+            var terminator = L.terminator().addTo(myMap);
+            setInterval(function() {
+                terminator.setTime();
+            }, 60000);
             firstRun = false;
         }
         
@@ -112,7 +117,7 @@ function getIss() {
 getIss();
 
 setInterval( function() {
-    getIss()}, 2000);
+    getIss()}, 4000);
 
 
 
