@@ -1,135 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Station Interactive</title>
-    <!-- Latest Bootstrap compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Bootstrap Toggle styles -->
-    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-    <!-- Leaflet maps CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-   crossorigin=""/>
-   <!-- Font Awesome stylesheet  -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-   <script src="https://kit.fontawesome.com/ffa668d9a1.js" crossorigin="anonymous"></script>
-    <!-- My own styles -->
-    <link rel="stylesheet" href="https://fabioaraujo76.github.io/spacestation_mp2/assets/css/main.css">
-    
-</head>
-<body id="bodymain" class="background-dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Station Interactive</title>
+        <!-- Latest Bootstrap compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Bootstrap Toggle styles -->
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+        <!-- Leaflet maps CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <!-- Font Awesome stylesheet  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/ffa668d9a1.js" crossorigin="anonymous"></script>
+        <!-- My own styles -->
+        <link rel="stylesheet" href="https://fabioaraujo76.github.io/spacestation_mp2/assets/css/main.css">
+        
+    </head>
+    <body id="bodymain" class="background-dark">
 
 
-    <!------------------------------------------------------------------------ SECTION HEADER  -->
-    <section id="header" class="header background-dark">
-        <div class="header-container">
+        <!------------------------------------------------------------------------ SECTION HEADER  -->
+        <section id="header" class="header background-dark">
+            <div class="header-container">
+                
+                <div class="toggle-mode">
+                <p id="toggle-p" class="background-dark">Dark Mode: 
+                        <span>
+                            <input id="mode-toggle"type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="primary" data-offstyle="info">
+                        </span>
+                    </p>
+                </div>
+
+                <div>
+                    <h1 id="logo" class="background-dark">International Space Station</h1>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------------------------------------ SECTION MAIN -->
+        <section id="main" class="main background-dark">       
             
-            <div class="toggle-mode">
-               <p id="toggle-p" class="background-dark">Dark Mode: 
-                    <span>
-                        <input id="mode-toggle"type="checkbox" checked data-toggle="toggle" data-size="mini" data-onstyle="primary" data-offstyle="info">
-                    </span>
-                </p>
-            </div>
-
-            <div>
-                <h1 id="logo" class="background-dark">International Space Station</h1>
-            </div>
-        </div>
-    </section>
-
-    <!------------------------------------------------------------------------ SECTION MAIN -->
-    <section id="main" class="main background-dark">       
-        
-        <!-- CARD FOR ISS LOCATION INTERACTIVE MAP  -->
-        <div id="issLocation-container" class="card container-dark">
-            <div class="card-title">
-                <h3>ISS Location:</h3>
-            </div>
-            <!-- LEAFLET MAP LOADING -->
-            <div id="worldMap"></div>
-            <div class="card-title">
-                <p><strong>Latitude: </strong><span id="latValue"></span>&deg;</p>
-                <p><strong>Longitude: </strong><span id="longValue"></span>&deg;</p>
-            </div>
-        </div>
-
-
-
-        <!-- CARD FOR ISS LIVE VIDEO -->
-        <div id="issLive-container" class="card container-dark">
-            <div class="card-title">
-                <h3>ISS Live Video:</h3>
-            </div>
-            <div id="issLive-div">
-                <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="card-title">
-                <p><strong>Altitude: </strong><span id="altiValue"></span> Km</p>
-                <p><strong>Speed: </strong><span id="speedValue"></span> Km/h</p>
-            </div>
-        </div>
-
-        <!-- CARD WITH PICTURE OF THE DAY FROM NASA API -->
-        <div id="picDay-container" class="card container-dark">
-            <div class="card-title">
-                <h3>Picture of the Day:</h3>
-            </div>
-            <div id="picDay"></div>
-            <div class="card-title">
-                <p id="title"></p>
-                <p id="credit"></p>
-            </div>
-        </div>
-
-        <!-- CARD WITH ABOUT INFORMATION AND LINKS -->
-        <div id="about-container" class="card container-dark">
-            <div class="card-title">
-                <h3>About the ISS:</h3>
-            </div>
-            <div class="about">
-                <p>The International Space Station is a large spacecraft in orbit around Earth that serves as a home for the crew and a unique science laboratory built in conjuction
-                     of Several Nations. The crew living at the ISS are transported by the SpaceX Dragon that completed 22 trips. For more information, please click on the buttons bellow: </p>
-                <div>
-                    <a id="toNasa" class="button-dark" href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-the-iss-58.html" target="_blank"><i class="fas fa-satellite-dish"></i> ISS History</a>
+            <!-- CARD FOR ISS LOCATION INTERACTIVE MAP  -->
+            <div id="issLocation-container" class="card container-dark">
+                <div class="card-title">
+                    <h3>ISS Location:</h3>
                 </div>
-                <div>
-                    <a id="toIss" class="button-dark" href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank"><i class="fas fa-satellite"></i> ISS Webpage</a>
-                </div>
-                <div>
-                    <a id="toSpacex" class="button-dark" href="https://www.spacex.com/vehicles/dragon/" target="_blank"><i class="fas fa-space-shuttle"></i> SpaceX</a>
+                <!-- LEAFLET MAP LOADING -->
+                <div id="worldMap"></div>
+                <div class="card-title">
+                    <p><strong>Latitude: </strong><span id="latValue"></span>&deg;</p>
+                    <p><strong>Longitude: </strong><span id="longValue"></span>&deg;</p>
                 </div>
             </div>
-            <div class="card-title">
-                <h3>About this website:</h3>
-            </div>
-            <div class="about">
-                <p>This is an unofficial fan page of the International Space Station so you can follow, check where it is, watch the live stream with the amazing view of our Blue Planet and lastely 
-                    you can enjoy the Astronomy Picture of the Day from NASA. Enjoy.
-                </p>
-            </div>
-        </div>
 
-        
-    <!------------------------------------------------------------------------ SECTION FOOTER  -->
-    </section>
-    <section id="footer" class="footer background-dark">
-            <p><i class="far fa-copyright"></i> Fabio De Araujo - 2020</p>
-    </section>
-    <!-- Latest Jquery compiled and minified JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!-- Bootstrap Toggle CDN - Javascript -->
-    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
-    <!-- Leaflet Map JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-        crossorigin=""></script>
-    <!-- Leaflet.Terminator Plugin to include Night and Day shadow on the map  -->
-    <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
-    <!-- My own script -->
-    <script src="/assets/js/main.js"></script>
-    <!-- https://fabioaraujo76.github.io/spacestation_mp2 -->
-</body>
+
+
+            <!-- CARD FOR ISS LIVE VIDEO -->
+            <div id="issLive-container" class="card container-dark">
+                <div class="card-title">
+                    <h3>ISS Live Video:</h3>
+                </div>
+                <div id="issLive-div">
+                    <iframe id="issLive-video" src="https://www.youtube.com/embed/5_rLJNq7Rw8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="card-title">
+                    <p><strong>Altitude: </strong><span id="altiValue"></span> Km</p>
+                    <p><strong>Speed: </strong><span id="speedValue"></span> Km/h</p>
+                </div>
+            </div>
+
+            <!-- CARD WITH PICTURE OF THE DAY FROM NASA API -->
+            <div id="picDay-container" class="card container-dark">
+                <div class="card-title">
+                    <h3>Picture of the Day:</h3>
+                </div>
+                <div id="picDay"></div>
+                <div class="card-title">
+                    <p id="title"></p>
+                    <p id="credit"></p>
+                </div>
+            </div>
+
+            <!-- CARD WITH ABOUT INFORMATION AND LINKS -->
+            <div id="about-container" class="card container-dark">
+                <div class="card-title">
+                    <h3>About the ISS:</h3>
+                </div>
+                <div class="about">
+                    <p>The International Space Station is a large spacecraft in orbit around Earth that serves as a home for the crew and a unique science laboratory built in conjuction
+                        of Several Nations. The crew living at the ISS are transported by the SpaceX Dragon that completed 22 trips. For more information, please click on the buttons bellow: </p>
+                    <div>
+                        <a id="toNasa" class="button-dark" href="https://www.nasa.gov/audience/forstudents/5-8/features/nasa-knows/what-is-the-iss-58.html" target="_blank"><i class="fas fa-satellite-dish"></i> ISS History</a>
+                    </div>
+                    <div>
+                        <a id="toIss" class="button-dark" href="https://www.nasa.gov/mission_pages/station/main/index.html" target="_blank"><i class="fas fa-satellite"></i> ISS Webpage</a>
+                    </div>
+                    <div>
+                        <a id="toSpacex" class="button-dark" href="https://www.spacex.com/vehicles/dragon/" target="_blank"><i class="fas fa-space-shuttle"></i> SpaceX</a>
+                    </div>
+                </div>
+                <div class="card-title">
+                    <h3>About this website:</h3>
+                </div>
+                <div class="about">
+                    <p>This is an unofficial fan page of the International Space Station so you can follow, check where it is, watch the live stream with the amazing view of our Blue Planet and lastely 
+                        you can enjoy the Astronomy Picture of the Day from NASA. Enjoy.
+                    </p>
+                </div>
+            </div>
+
+            
+        <!------------------------------------------------------------------------ SECTION FOOTER  -->
+        </section>
+        <section id="footer" class="footer background-dark">
+                <p><i class="far fa-copyright"></i> Fabio De Araujo - 2020</p>
+        </section>
+        <!-- Latest Jquery compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Bootstrap Toggle CDN - Javascript -->
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <!-- Leaflet Map JavaScript -->
+        <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+            integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+            crossorigin=""></script>
+        <!-- Leaflet.Terminator Plugin to include Night and Day shadow on the map  -->
+        <script src="https://unpkg.com/@joergdietrich/leaflet.terminator"></script>
+        <!-- My own script -->
+        <script src="https://fabioaraujo76.github.io/spacestation_mp2/assets/js/main.js"></script>
+    </body>
 </html>
