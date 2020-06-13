@@ -41,6 +41,7 @@ This is the International Space Station unofficial fan website to demonstrate th
 
     -   Home Page Wireframe - [View](https://drive.google.com/file/d/1ImHxpkpQ5OTSVJzXGB-Z9g_JXOTMM2qf/view?usp=sharing)
 
+
 ## Features
 
 -   Mobile First approach
@@ -52,6 +53,7 @@ This is the International Space Station unofficial fan website to demonstrate th
 -   Interactive elements
 
 -   Live updated content
+
 
 ## Technologies Used
 
@@ -99,11 +101,81 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-<p>
-<a href="http://jigsaw.w3.org/css-validator/check/referer">
-    <img style="border:0;width:88px;height:31px"
-        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
-        alt="Valid CSS!" />
-    </a>
-</p>
+    <p>
+    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+        </a>
+    </p>
 
+
+### Further Testing
+
+-   The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Firefox browsers.
+-   The website was viewed on a variety of devices such as Desktop, Laptop, various Android phones of different resolutions and also iPhones.
+-   A large amount of testing was done to ensure that all features were working correctly.
+-   Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
+
+### Testing FeedBack and Improvement
+
+-   One user pointed the fact of the Dark Mode toggle not being placed on the usual location making the visual not pleasant. 
+    After researching the toggle button was moved to the top right side of the page out of the way and following a design language more usual and easy on the eyes of the visitor.
+
+-   Most of the people testing the website were happy with the content and design of the website. No errors were reported.
+
+
+### Known Bugs
+
+-   Once it returned error 500 when trying to fetch the picture from NASA, I am waiting the error to happen again to gather more information and fix it. There is an open Issue logget on my github repositor to this problem.
+-   This website is not recommended to be used with Internet Explorer, most of its functionality didn't load.
+
+
+## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/fabioaraujo76/spacestation_mp2)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the now published site [link](https://fabioaraujo76.github.io/spacestation_mp2/) in the "GitHub Pages" section.
+
+
+## Credits
+
+### Code
+
+-   [Code Institute](https://codeinstitute.net/) - The course gave me the hability to improve my knowledge and was very important on the HTML, CSS and JQuery part of this project.
+
+-   [Bootstrap Toggle](https://www.bootstraptoggle.com/#usage) - The documentation part was important to understand and be agle to implement the toggle for Dark/Light mode.
+
+-   [dcode Youtube](https://www.youtube.com/watch?v=5VCY9yCZnlc&t=135s) - It was important to reforce and help me to create the functions to fetch data from the APIs.
+
+-   [Leaflet Js](https://leafletjs.com/examples.html) - The Tutorial part of the website was very useful helping me to succesfully use their library.
+
+-   [Where the ISS is at?](https://wheretheiss.at/w/developer) - The documentation was important to understand the data returned so I could display using JQuery.
+
+-   ###Other Sources - Not less important, but also helpful, W3 website, Stack Overflow and Libraries documentation.
+
+
+### Content
+
+-   The content was gathered from Where the ISS is at?, Nasa, SpaceX and Space Official Youtube channel.
+
+-   The about section was written by the developer.
+
+### Media
+
+-   Live Video . [Space Official Youtube Channel](https://www.youtube.com/watch?v=5_rLJNq7Rw8)
+
+-   Astronomy Photo of the Day . [NASA](https://www.nasa.gov/)
+
+### Acknowledgements
+
+-   My Mentor for continuous helpful feedback.
+
+-   All friends and family that helped me to test and gave me valuable feedback.
