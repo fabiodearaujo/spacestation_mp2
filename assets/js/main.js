@@ -154,7 +154,7 @@ function getApod() {
         console.log("Something went wrong with retrieving data, please try again later");
         console.log(error);
     })
-};
+}
 
 getApod();
 
