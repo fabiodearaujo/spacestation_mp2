@@ -2,9 +2,9 @@
 
 [View the live project here.](https://fabioaraujo76.github.io/spacestation_mp2/)
 
-This is the International Space Station unofficial fan website to demonstrate the power of APIs. It is designed to be "Mobile First", responsibe and accessible on a range of devices, making it easy to navigate and obtain information about the spaceship.
+This is the International Space Station unofficial fan website to demonstrate the power of APIs. It is designed to be "Mobile First", responsibe and accessible on a range of devices, making it easy to navigate and visually pleasant, also easy to obtain information about the spaceship and see it in action.
 
-<h2 align="center"><img src="https://fabioaraujo76.github.io/spacestation_mp2/assets/img/landing.png"></h2>
+<h2 align="center"><img src="https://fabioaraujo76.github.io/spacestation_mp2/assets/img/mobileandlaptop.png"></h2>
 
 
  ## User Experience (UX)
@@ -32,8 +32,10 @@ This is the International Space Station unofficial fan website to demonstrate th
 
     -   #### General
         -   This webpage was created as a mobile first, giving the appearence of an app with cards containing the content. If opened in devices with larger screen, the cards are going to be resized and be shown in 2 columns, this make the site easier to mantain if necessary to include or remove cards.
+
     -   #### Colour Scheme
         -   The approach to give the user the option of a Dark or a Light mode was taking in consideration when developing this website. It will always start in the Dark Mode as default to be reminded of the night sky and space, in this mode there is a black background and dark grey cards. Switching to Light mode the background will be a bright pastel blue and light grey cards.
+
     -   #### Typography
         -   The Roboto font is the main font used throughout the whole website with Sans Serif as the fallback font in case for any reason the font isn't being imported into the site correctly. Roboto is a clean font used frequently in Google ecosystem, so it is both attractive, appropriate and memorable.For the Logo the font was Orbitro that its futuristic look is similar to the fonts used in a sci-fi movie, making it very appropriated to this website, in the case of it not being supported by the browser used, Sans Serif will fallback.
 
