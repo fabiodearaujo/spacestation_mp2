@@ -119,7 +119,7 @@ function getIss() {
 getIss();
 
 setInterval( function() {
-    getIss()}, 4000);
+    getIss()}, 3000);
 
 
 

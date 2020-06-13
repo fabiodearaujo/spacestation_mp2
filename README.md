@@ -29,6 +29,9 @@ This is the International Space Station unofficial fan website to demonstrate th
         3. As a Frequent User, I want to download the picture of the day to use as workspace background in my laptop.
 
 -   ### Design
+
+    -   #### General
+        -   This webpage was created as a mobile first, giving the appearence of an app with cards containing the content. If opened in devices with larger screen, the cards are going to be resized and be shown in 2 columns, this make the site easier to mantain if necessary to include or remove cards.
     -   #### Colour Scheme
         -   The approach to give the user the option of a Dark or a Light mode was taking in consideration when developing this website. It will always start in the Dark Mode as default to be reminded of the night sky and space, in this mode there is a black background and dark grey cards. Switching to Light mode the background will be a bright pastel blue and light grey cards.
     -   #### Typography
@@ -99,7 +102,7 @@ This is the International Space Station unofficial fan website to demonstrate th
 
 ## Testing
 
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+The W3C Markup Validator and W3C CSS Validator Services were used to validate the page of the project to ensure there were no syntax errors.
 
 -   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
@@ -161,7 +164,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 -   [Where the ISS is at?](https://wheretheiss.at/w/developer) - The documentation was important to understand the data returned so I could display using JQuery.
 
--   ###Other Sources - Not less important, but also helpful, W3 website, Stack Overflow and Libraries documentation.
+-   Other Sources - Not less important, but also helpful, W3 Schools, Stack Overflow and Libraries/API documentation.
 
 
 ### Content
