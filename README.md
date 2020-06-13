@@ -76,7 +76,9 @@ This is the International Space Station unofficial fan website to demonstrate th
 1. [jQuery:](https://jquery.com/)
     - jQuery was used to create Dark/Light Mode changing the color of the elements on the screen and also to display/create elements fetched from the API's source.
 1. [Leaflet JS](https://leafletjs.com/)
-    - Leaflet is a JavaScript Library for mobile-friendly interactive maps, it was used to create the map on the first card.
+    - Leaflet is a JavaScript Library for mobile-friendly interactive maps, it was used to create the map on the first card.    
+1. [OpenStreetMap](https://wiki.openstreetmap.org/wiki/API_v0.6)
+    - Open Street Maps API was used to collect the tiles and build the map on top of Leaflet JS.    
 1. [Leaflet.Terminator](https://github.com/joergdietrich/Leaflet.Terminator)
     - Leaflet.Terminator is a Leaflet plugin add on to create a overlay layer to show day and night regions on the Leaflet Earth Map.
 1. [Where the ISS at?](https://wheretheiss.at/w/developer)
