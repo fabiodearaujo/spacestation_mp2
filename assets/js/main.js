@@ -16,7 +16,8 @@ $(function() {
             $("#about-container").removeClass("container-light").addClass("container-dark");
             $("#toNasa").removeClass("button-light").addClass("button-dark"); 
             $("#toIss").removeClass("button-light").addClass("button-dark");    
-            $("#toSpacex").removeClass("button-light").addClass("button-dark"); 
+            $("#toSpacex").removeClass("button-light").addClass("button-dark");
+            $("#githubLink").removeClass("githubLink-light").addClass("githubLink-dark");  
         } else {
             $("#bodymain").removeClass("background-dark").addClass("background-light");
             $("#header").removeClass("background-dark").addClass("background-light");
@@ -31,6 +32,7 @@ $(function() {
             $("#toNasa").removeClass("button-dark").addClass("button-light");
             $("#toIss").removeClass("button-dark").addClass("button-light");
             $("#toSpacex").removeClass("button-dark").addClass("button-light");
+            $("#githubLink").removeClass("githubLink-dark").addClass("githubLink-light");
         }
 
     })

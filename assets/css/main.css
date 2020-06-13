@@ -178,6 +178,22 @@ body {
     padding: 1px 5px;
 }
 
+.githubLink-dark {
+    color: #fff
+}
+
+.githubLink-dark:hover {
+    color: rgb(124, 190, 145);
+}
+
+.githubLink-light {
+    color: black
+}
+
+.githubLink-light:hover {
+    color: #60864f;
+}
+
 
 /* ----------------------------------------- SECTION FOOTER */
 
@@ -185,7 +201,6 @@ body {
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
-
 
 
 /* ----------------------------- MEDIA QUERIES FOR RESPONSIVE PAGE ON DESKTOP */
