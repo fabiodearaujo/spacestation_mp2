@@ -134,9 +134,12 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 
 ### Known Bugs
 
--   Once it returned error 500 when trying to fetch the picture from NASA, I am waiting the error to happen again to gather more information and fix it. There is an open Issue logget on my github repositor to this problem.
+-   Once it returned error 500 when trying to fetch the picture from NASA, after researching it, that means it reached the limit of API requests. The API not always return a code so I am waiting the issue happen again to be able to work on a solution.
 -   This website is not recommended to be used with Internet Explorer, most of its functionality didn't load.
 
+## Issues logging
+
+- Issues encontered after the project was deployed are being registered at [GitHub Issues Tab](https://github.com/fabioaraujo76/spacestation_mp2/issues).
 
 ## Deployment
 
@@ -150,6 +153,45 @@ The project was deployed to GitHub Pages using the following steps...
 4. Under "Source", click the dropdown called "None" and select "Master Branch".
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://fabioaraujo76.github.io/spacestation_mp2/) in the "GitHub Pages" section.
+
+
+## Collaboration
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository) for more informatino about Cloning repositories.
+
+Click [Here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests) for more informatino about Collaboration.
 
 
 ## Credits
