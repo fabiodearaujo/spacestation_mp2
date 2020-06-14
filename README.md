@@ -137,7 +137,7 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate th
 -   Once it returned error 500 when trying to fetch the picture from NASA, after researching it, that means it reached the limit of API requests. The API not always return a code so I am waiting the issue happen again to be able to work on a solution.
 -   This website is not recommended to be used with Internet Explorer, most of its functionality didn't load.
 
-## Issues logging
+### Issues tracker
 
 - Issues encontered after the project was deployed are being registered at [GitHub Issues Tab](https://github.com/fabioaraujo76/spacestation_mp2/issues).
 
