@@ -150,7 +150,7 @@ function getApod() {
         
         // HANDLING ERROR AS I NOTICED LIKE TODAY THE PICTURE OF THE DAY IS A YOUTUBE VIDEO INSTEAD OF A PICTURE
         if (mediaType == "video") {
-            $("#picDay").html("<iframe src='"+ apodpic + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            $("#picDay").html("<iframe id='apocpic' src='"+ apodpic + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
         } else {
             $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
         }
