@@ -138,14 +138,24 @@ function getApod() {
         let apodpichd = apodImg.hdurl;
         let apodcop = apodImg.copyright;
         let apodtitle = apodImg.title;
+        let mediaType = apodImg.media_type;
 
+       
         // HANDLER TO DON'T SHOW UNDEFINED IN CASE THE INFORMATION IS MISSING ON THE JSON 
         if (apodcop == undefined || apodcop === "") {
             apodcop = "Not credited by NASA";
         }
 
         //DISPLAYING INFORMATION INTO THE CARD
-        $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
+        
+        // HANDLING ERROR AS I NOTICED LIKE TODAY THE PICTURE OF THE DAY IS A YOUTUBE VIDEO INSTEAD OF A PICTURE
+        if (mediaType == "video") {
+            $("picDay").html("<iframe src='"+ apodpic + "' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+        } else {
+            $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
+        }
+        
+        
         $("#title").html("<strong>Title: </strong>"+apodtitle);
         $("#credit").html("<strong>Credits: </strong>"+apodcop);
 
