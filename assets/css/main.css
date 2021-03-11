@@ -72,18 +72,18 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     
 }
 
 
 .card {
-    /* position: relative; */
+    
     text-align: center;
-    margin-bottom: 50px;
+    margin: 10px 10px;
     border-radius: 15px;
     min-width: 300px;
-    max-width: 500px;
+    max-width: 520px;
     width: 97%;
     height: 600px;
     font-family: "Roboto", sans-serif;
@@ -210,21 +210,12 @@ body {
             padding: 15px;
             margin-top: 30px; 
         }
-        
-        .button-dark:link, .button-dark:visited {
-            padding: 8px 12px;
-        }
-        
-        .button-dark:hover, .button-dark:active {
-            padding: 8px 12px;
-        }
-        
-        .button-light:link, .button-light:visited {
-            padding: 8px 12px;
-        }
-        
+
+        .button-dark:link, .button-dark:visited,
+        .button-dark:hover, .button-dark:active,
+        .button-light:link, .button-light:visited,
         .button-light:hover, .button-light:active {
-            padding: 8px 12px;
+            padding: 8px; 
         }
 
         .toggle-mode {
@@ -239,13 +230,8 @@ body {
    }
 
 
-
-
     @media screen and (min-width: 1420px) {
-        .card {
-            min-width: 600px;
-        }
-
+       
         #logo {
             font-size: 4em;
         }
@@ -253,10 +239,7 @@ body {
     }
 
     @media screen and (min-width: 1790px) {
-        .card {
-            min-width: 800px;
-        }
-
+    
         #logo {
             font-size: 5em;
         }
@@ -266,30 +249,17 @@ body {
             margin-top: 60px; 
         }
         
-        .button-dark:link, .button-dark:visited {
-            padding: 15px 25px;
-        }
-        
-        .button-dark:hover, .button-dark:active {
-            padding: 15px 25px;
-        }
-        
-        .button-light:link, .button-light:visited {
-            padding: 15px 25px;
-        }
-        
+        .button-dark:link, .button-dark:visited,
+        .button-dark:hover, .button-dark:active,
+        .button-light:link, .button-light:visited,
         .button-light:hover, .button-light:active {
-            padding: 15px 25px;
+            padding: 8px; 
         }
-
-
+        
     }
 
     @media screen and (min-width: 2390px) {
-        .card {
-            min-width: 1000px;
-        }
-
+       
         #logo {
             font-size: 6em;
         }
