@@ -43,7 +43,7 @@ $(function() {
 let myMap = L.map("worldMap", { minZoom: 1, maxZoom: 9}).setView([0,0],1);
 
 //   ADDING TILES TO THE MAP FROM OPENSTREETMAPS.ORG
-const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 let tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 let tiles = L.tileLayer(tileUrl, { attribution });
 tiles.addTo(myMap);
@@ -51,7 +51,7 @@ tiles.addTo(myMap);
 
 // CREATING A CUSTOM MARKER TO THE MAP
 const issIcon = L.icon( {
-    iconUrl: "https://fabioaraujo76.github.io/spacestation_mp2/assets/img/iss200px.png",
+    iconUrl: "https://fabiodearaujo.github.io/spacestation_mp2/assets/img/iss200px.png",
     iconSize: [40,30],
     iconAnchor: [25,16]
 })
@@ -65,7 +65,7 @@ let urlISS = "https://api.wheretheiss.at/v1/satellites/25544";
 let firstRun = true;
 
 
-//   FETCHING THE DATA FROM JSON API - EXAMPLE MODIFIED TO MY NEEDS FROM CODE FROM dcode YOUTUBE CHANNEL - https://www.youtube.com/watch?v=5VCY9yCZnlc
+//   FETCHING THE DATA FROM JSON API - EXAMPLE MODIFIED TO MY NEEDS FROM CODE FROM dcode YOUTUBE CHANNEL
 function getIss() {
     fetch(urlISS).then(function(response) {
         
@@ -123,11 +123,11 @@ setInterval( function() {
 
 
 
-// NASA API URL SETUP 
-let nasaUrl = "https://api.nasa.gov/planetary/apod?api_key=GLaY6JWgmAcIvfY9Xx8FcQqmbA3hdzQLhho0kN3q"
+// NASA APOD API endpoint from our backend
+let nasaUrl = 'http://localhost:3000/api/apod';
 
 function getApod() {
-    // FECHING DATA FROM NASA API TO GET BACK THE PICTURE OF THE DAY AND INFORMATION 
+    // Fetching NASA APOD from our backend server
     fetch(nasaUrl).then(function(resp) {
         
         return resp.json();
