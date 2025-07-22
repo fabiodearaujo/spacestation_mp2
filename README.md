@@ -1,6 +1,6 @@
 <h1 align="center">Space Station - Interactive Frontend Development Milestone Project</h1>
 
-[View the live project here.](https://fabioaraujo76.github.io/spacestation_mp2/)
+[View the live project here.](https://fabioadearaujo.github.io/spacestation_mp2/)
 
 This is the International Space Station unofficial fan website to demonstrate the power of APIs. It is designed to be "Mobile First", responsibe and accessible on a range of devices, making it easy to navigate and visually pleasant, also easy to obtain information about the spaceship and see it in action.
 
