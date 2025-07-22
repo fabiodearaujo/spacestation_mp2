@@ -4,10 +4,14 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Enable CORS for your frontend domain
-app.use(cors());
+app.use(cors({
+    origin: ['https://fabiodearaujo.github.io', 'http://localhost:5500'],
+    methods: ['GET'],
+    credentials: true
+}));
 
 // NASA APOD endpoint
 app.get('/api/apod', async (req, res) => {
