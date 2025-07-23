@@ -124,7 +124,7 @@ setInterval( function() {
 
 
 // NASA APOD API endpoint from our backend
-let nasaUrl = 'http://localhost:3000/api/apod';
+let nasaUrl = config.apiBaseUrl + '/api/apod';
 
 function getApod() {
     // Fetching NASA APOD from our backend server
