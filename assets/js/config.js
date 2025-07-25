@@ -1,5 +1,5 @@
 const config = {
     apiBaseUrl: window.location.hostname === 'fabiodearaujo.github.io'
-        ? 'https://spacestation-mp2.onrender.com' // Replace with your actual Render URL
+        ? 'https://spacestation-mp2.vercel.app' // Replace with your actual Render URL
         : 'http://localhost:3000'
 };
