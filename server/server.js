@@ -4,10 +4,14 @@ const cors = require('cors');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Enable CORS for your frontend domain
-app.use(cors());
+app.use(cors({
+    origin: ['https://fabiodearaujo.github.io', 'http://localhost:5500'],
+    methods: ['GET', 'OPTIONS'],
+    credentials: true
+}));
 
 // NASA APOD endpoint
 app.get('/api/apod', async (req, res) => {
@@ -22,6 +26,19 @@ app.get('/api/apod', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+// Handle preflight requests
+app.options('*', cors());
+
+// Health check endpoint
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'OK' });
 });
+
+// For Vercel, we need to export the app
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+    });
+}
+
+module.exports = app;
