@@ -124,7 +124,7 @@ setInterval( function() {
 
 
 // NASA APOD API endpoint from our backend
-let nasaUrl = config.apiBaseUrl + '/apod';
+let nasaUrl = 'https://spacestation-api.vercel.app/apod';
 
 function getApod() {
     // Fetching NASA APOD from our backend server
