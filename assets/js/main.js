@@ -127,9 +127,26 @@ setInterval( function() {
 let nasaUrl = 'https://spacestation-api.vercel.app/apod';
 
 function getApod() {
+    // Show loading spinner while fetching data
+    $("#picDay").html(`
+        <div class="spinner-container">
+            <div class="spinner"></div>
+            <div class="spinner-message">Retrieving Picture of the Day from NASA Database</div>
+        </div>
+    `);
+    $("#title").html("<strong>Title: </strong>Loading...");
+    $("#credit").html("<strong>Credits: </strong>Loading...");
+
     // Fetching NASA APOD from our backend server
     fetch(nasaUrl).then(function(resp) {
-        
+        if (!resp.ok) {
+            console.log(resp.json());
+            $("#picDay").html("<a href='#' target='_blank'>"+"<img id='apocpic' src='assets/img/nasa_not_available.jpg' alt='Nasa Service Down.'/></a>");
+            $("#title").html("<strong>Title: </strong>"+"Data not available");
+            $("#credit").html("<strong>Credits: </strong>"+"Data not available");
+            throw new Error(resp.error);
+        }
+
         return resp.json();
 
     }).then(function(apodImg) {
@@ -155,12 +172,10 @@ function getApod() {
             $("#picDay").html("<a href='"+apodpichd+"' target='_blank'>"+"<img id='apocpic' src='"+apodpic+"' alt='Astronomy Picture of the Day'/></a>");
         }
         
-        
         $("#title").html("<strong>Title: </strong>"+apodtitle);
         $("#credit").html("<strong>Credits: </strong>"+apodcop);
 
     }).catch(function(error) {
-        
         console.log("Something went wrong with retrieving data, please try again later");
         console.log(error);
     })
